@@ -1,0 +1,75 @@
+#characterList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.character {
+    display: flex;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(40% - 20px); /* Reduced card width */
+    margin-bottom: 20px;
+    background-color: #e7e4e4;
+}
+
+.character img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+}
+
+.characterDetails {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.characterDetails h2 {
+    margin: 0 0 10px;
+    color: #333;
+    font-weight: 600; 
+    font-size: xx-large;
+
+    &:hover {
+        color: skyblue;
+        transform: scale(1.05);
+    }
+}
+
+.characterDetails p {
+    color: #555;
+    font-weight: 600; 
+    font-size: large;
+}
+
+#basicDetails {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#basicDetails button {
+    height: 10px;
+    width: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: cursor;
+}
+
+#locationDetails {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#locationDetails .divHead {
+    color: orange;
+}
