@@ -47,7 +47,7 @@ const RenderListComponent = ({ charactersData }) => {
     return (
         <React.Fragment>
             {
-                isLoading ? <div>Loading...</div> : isError ? <div>Error fetching data</div> : data && data.length > 0 ? <CharacterComponent characterDetails={characterDetails} data={data}/> : null
+                isLoading ? <div>Loading...</div> : isError ? <div>Error fetching data</div> : data ? <CharacterComponent characterDetails={characterDetails} data={data}/> : null
             }
             <div id='characterList'>
                 {
