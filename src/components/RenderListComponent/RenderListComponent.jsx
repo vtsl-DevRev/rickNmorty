@@ -43,16 +43,11 @@ const RenderListComponent = ({ charactersData }) => {
     const { data, isLoading, isError } = useQuery(['episodeData', episodeList], getEpisodeData, {
         enabled: episodeList.length > 0,
     });
-
-    // console.log(data);
-    // data && data.map((episode) => {
-    //     console.log(episode.name);
-    // });
     
     return (
         <React.Fragment>
             {
-                isLoading ? <div>Loading...</div> : isError ? <div>Error fetching data</div> : <CharacterComponent characterDetails={characterDetails} data={data}/>
+                isLoading ? <div>Loading...</div> : isError ? <div>Error fetching data</div> : data && data.length > 0 ? <CharacterComponent characterDetails={characterDetails} data={data}/> : null
             }
             <div id='characterList'>
                 {
